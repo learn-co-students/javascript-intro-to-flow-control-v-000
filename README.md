@@ -1,23 +1,22 @@
 # JavaScript Flow Control
 
-## Objects
+## Objectives
 + Write if-statements in JS
-+ Write if-else statements in JS
 + Write if-elsif-else statements in JS
 + Use the ternary operator in JS
 + Write switch statements in JS
 
 ## About
 
-Flow Control allows the execution of code only under certain conditions. In Ruby, we used case statements, if statements, if/else statements, if/elsif/else statements, ternary operators, and case statements to control what code runs when. JavaScript has similar methods to control what blocks of code to execute: if statements, if/else statements, if/else if/else statements, ternary operators, and switch statements.
+Flow Control allows the execution of code only under certain conditions. In Ruby, we used if statements, if/else statements, if/elsif/else statements, ternary operators, and case statements to control what code runs when. JavaScript has similar methods to control what blocks of code to execute: if statements, if/else statements, if/else if/else statements, ternary operators, and switch statements.
 
-You'll be writing your code in `js/flow-control.js`. Make sure to run the tests using `learn -b`.
+You'll be writing your code in `flow-control.js`. Make sure to run the tests using `learn -b`.
 
 ## If Statements
 
-Evaluates the code wrapped in parenthesis to either true or false. If `true`, the code block is executed: 
+An if statement evaluates the code wrapped in parenthesis to either true or false. If `true`, the code block is executed. If false, nothing is executed.
 
-Syntax:
+JS Syntax:
 
 ```javascript
 if (conditionToTestIsTrue) {
@@ -25,7 +24,7 @@ if (conditionToTestIsTrue) {
 }
 ```
 
-+ Write a function `basicTeenager` that accepts an age as a parameter. The function should contain an if-statement that checks to see if the age is a teenager. If the age is a teenager, it should return `"You're a teenager!"`
+Now, in `flow-control.js` let's write a function `basicTeenager` that accepts an age as a parameter. The function should contain an if-statement that checks to see if the age is a teenager. If the age is a teenager, it should return `"You are a teenager!"`
 
 ## If/Else Statements
 
@@ -37,13 +36,13 @@ Syntax:
 if (conditionToTestIsTrue) {
   // condition is false hence code is not executed
 } else {
-  // code to be executed because previous `if` condition is false
+  // code to be executed because previous condition is false
 }
 ```
 
 + Define a function `teenager` that accepts an age as a parameter. If the age is between 13-19 it should return `"You are a teenager!"`. Otherwise, the function should return `"You are not a teenager"`.
 
-## If/Else if/Else Statements
+## If/Else If Statements
 
 `if` statements can also be combined with an `else if` clause. This is like an else statement, but with its own condition. It will only run if its condition is true, and the previous statement's condition was false. 
 
@@ -55,13 +54,13 @@ Syntax:
 if (conditionToTestIsTrue){
     // condition is false hence code is not executed
 } else if (thisConditionIsTrue) {
-  // execute this code if previous `if` statement is false
+  // execute this code if previous statement is false
 } else {
   // execute this code if the 2 conditions above are false
 }
 ```
 
-+ Define a function `ageChecker` that takes in an age as a parameter. If the age is between 13-19 it should return `"You are a teenager"`. If the age is 12 or below, it should return `"You are a kid"`. If the age is above 19, it should return `"You are a grownup"`
++ Define a function `ageChecker` that takes in an age as a parameter. If the age is between 13-19 it should return `"You are a teenager!"`. If the age is 12 or below, it should return `"You are a kid"`. If the age is above 19, it should return `"You are a grownup"`
 
 ## Ternary Operator
 
@@ -105,6 +104,30 @@ switch (expression) {
       // code to be executed if case n and case m false
 }
 ```
+
+Example:
+
+```js
+var mood = "hungry"
+switch(mood){
+  case "happy":
+    console.log("Dance to Pharrel's Happy");
+    break;
+  case "sad":
+    console.log("You should eat a pint of icecream");
+    break;
+  case "anxious":
+    console.log("Take some deep breaths");
+    break;
+  case "hungry":
+    console.log("You should eat a big chocolate cake");
+    break;
+  default: 
+    console.log("That's not a mood we support");
+}
+```
+
+In the example above, we'll see `"You should eat a big chocolate cake"` printed to the console. If we change the value of the `mood` variable to `sad` you'll see `"You should eat a pint of icecream"`. If the value of `mood` changed to `"grumpy"`, the default statement would trigger and print out `"That's not a mood we support"`.
   
 + Define a function `switchAge` that accepts an age as a parameter. The case statement should switch on `age` and return `"You are a teenager"` if the age is 13, 14, 15, 16, 17, 18, or 19, and return `"You have an age"` as the default.
 
@@ -117,3 +140,5 @@ switch (expression) {
 * [Codecademy - Switch Statements](http://www.codecademy.com/glossary/javascript/switch-statements)
 
 <a href='https://learn.co/lessons/intro-to-flow-control.js' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-flow-control.js'>Intro To Flow Control in JS</a> on Learn.co and start learning to code for free.</p>
