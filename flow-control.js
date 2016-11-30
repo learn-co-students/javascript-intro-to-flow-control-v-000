@@ -3,7 +3,7 @@ function basicTeenager(age) {
     return "You are a teenager!";
 }
 };
-
+basicTeenager(13)
 
 
 function teenager (age) {
@@ -15,7 +15,7 @@ function teenager (age) {
   return "You are not a teenager";
 }
 };
-
+teenager(15)
 
 
 function ageChecker (age) {
@@ -30,17 +30,40 @@ else if (age <=12){
   }
 };
 
-function ternaryTeenager (age){
-  age >=13 && age <=19 ? return "You are a teenager" : return "You are not a teenager";
+ageChecker(24)
+
+function ternaryTeenager (age) {
+  (age >=13 && age <=19) ? "You are a teenager" : "You are not a teenager";
 };
+
+ternaryTeenager(25)
 
 function switchAge (age){
   switch (age) {
-    case 13,14,15,16,17,18,19:
+    case 13:
     return "You are a teenager";
     break;
+    case 14:
+    return "You are a teenager";
+    break;
+    case 15:
+    return "You are a teenager";
+    break;
+    case 16:
+    return "You are a teenager";
+    break;
+    case 17:
+    return "You are a teenager";
+    break;
+    case 18:
+    return "You are a teenager";
+    break;
+    case 19:
+    return "You are a teenager";
     default:
     return "You have an age";
 
   }
-}
+};
+
+switchAge(13)
