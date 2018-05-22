@@ -17,7 +17,7 @@ describe('Flow Control Basics', function() {
     it('should return "You are a teenager!" if the age is between 13-19', function() {
       expect(teenager(13)).toBe("You are a teenager!");
     });
-    it('should return "you are not a teenager" if the age is not between 13-19', function(){
+    it('should return "You are not a teenager" if the age is not between 13-19', function(){
       expect(teenager(12)).toBe("You are not a teenager");
       expect(teenager(29)).toBe("You are not a teenager");
     });
